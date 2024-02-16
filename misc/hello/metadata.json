@@ -1,0 +1,8 @@
+{
+  "name": "hello",
+  "description": "GNU hello",
+  "depends": [],
+  "downloads": [
+    "https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz"
+  ]
+}
