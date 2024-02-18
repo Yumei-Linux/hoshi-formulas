@@ -1,0 +1,8 @@
+{
+  "name": "cutefetch",
+  "description": "A simple fetch tool written in C",
+  "depends": [],
+  "downloads": [
+    "https://github.com/AlphaTechnolog/cutefetch/archive/refs/heads/main.zip"
+  ]
+}

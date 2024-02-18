@@ -2,10 +2,9 @@
 
 packagename="$1"
 
-# TODO: Replace rootfs with / on production
-export rootfs=$HOME/rootfs
 export dest="$(mktemp -d)"
 export downloads="$(pwd)/downloads"
+export dist="$(pwd)/dist"
 
 . "./$packagename/build.sh"
 
@@ -28,17 +27,22 @@ popd
 
 test -d $rootfs || mkdir -pv $rootfs
 
-# merging files into rootfs according to files.txt
-echo "==> !!MERGING INTO ROOTFS"
-cat $dest/files.txt | \
-  while read -r file; do \
-    dir=$(dirname $file); \
-    test -d $rootfs/$dir || mkdir -pv $rootfs/$dir; \
-    install -Dvm755 $dest/$file $rootfs/$dir; \
-  done
-
 echo "==> Done, cleaning up"
 
-rm -rf $dest
 rm -rf ./downloads/*
 rm -rf ./build
+
+packagename="$(echo $packagename | sed 's/\// /g' | awk '{print $2}')"
+
+echo "==> Building hoshi image ($packagename.hoshi)"
+
+mv $dest ./$packagename
+tar -cf $packagename{.tar.gz,}
+mv $packagename{.tar.gz,.hoshi}
+rm -rf ./$packagename
+
+test -d $dist || mkdir -p $dist
+mv ./$packagename.hoshi $dist
+du -sh $dist/$packagename.hoshi
+
+echo "==> Done"
