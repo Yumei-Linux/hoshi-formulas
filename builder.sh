@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd $(dirname $0)
+
 packagename="$1"
 
 export dest="$(mktemp -d)"

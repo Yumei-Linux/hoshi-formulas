@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd $(dirname $0)
+
 filename="$1"
 original_filename="$(echo "$(basename $filename)" | sed 's/.hoshi//g')"
 
@@ -20,8 +22,7 @@ pushd "$tmp" > /dev/null 2>&1
       if [[ "$file" != "" ]]; then
         dir="$(dirname $file)"
         echo "  ++ $file"
-        test -d $rootfs/$dir || mkdir -p $rootfs/$dir > /dev/null 2>&1
-        install -Dm755 $file $rootfs/$file > /dev/null 2>&1
+        install -Dm755 ./$file $rootfs/$file >/dev/null 2>&1
       fi
     done
   popd > /dev/null 2>&1
