@@ -1,0 +1,8 @@
+{
+  "name": "htop",
+  "description": "A cross-platform interactive process viewer",
+  "depends": ["sys/lm-sensors"],
+  "downloads": [
+    "https://github.com/htop-dev/htop/releases/download/3.3.0/htop-3.3.0.tar.xz"
+  ]
+}
