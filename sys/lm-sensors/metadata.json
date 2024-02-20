@@ -1,7 +1,7 @@
 {
   "name": "lm-sensors",
   "description": "The lm_sensors package provides userspace support for the hardware monitoring drivers in the Linux kernel",
-  "depends": ["sys/which"],
+  "depends": ["sys/which", "files/bison"],
   "downloads": [
     "https://github.com/lm-sensors/lm-sensors/archive/V3-6-0/lm-sensors-3-6-0.tar.gz"
   ]
