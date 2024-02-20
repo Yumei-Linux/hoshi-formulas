@@ -73,3 +73,4 @@ rm -rf ./$packagename
 test -d $dist || mkdir -p $dist
 mv ./$packagename.hoshi $dist
 du -sh $dist/$packagename.hoshi
+
