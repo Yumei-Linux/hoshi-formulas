@@ -6,8 +6,10 @@ packagename="$1"
 
 export dest="$(mktemp -d)"
 export downloads="$(pwd)/downloads"
+export build_dir="$(pwd)/build"
 export dist="$(pwd)/dist"
 
+# loading the package building rules.
 . "./$packagename/build.sh"
 
 # logging
