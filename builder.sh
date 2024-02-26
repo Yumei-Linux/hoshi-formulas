@@ -2,6 +2,10 @@
 
 cd $(dirname $0)
 
+# loading logging utils
+. .internal/logging.sh
+
+# extracting information
 packagename="$1"
 
 export dest="$(mktemp -d)"
@@ -12,22 +16,6 @@ export dist="$(pwd)/dist"
 # loading the package building rules.
 . "./$packagename/build.sh"
 
-# logging
-COLOR_RED='\033[31m'
-COLOR_BLUE='\033[34m'
-COLOR_GREEN='\033[32m'
-COLOR_YELLOW='\033[33m'
-COLOR_MAGENTA='\033[35m'
-COLOR_CYAN='\033[36m'
-COLOR_RESET='\033[0m'
-
-info() {
-  echo -e "${COLOR_BLUE}info: ${COLOR_RESET}${@}"
-}
-
-success() {
-  echo -e "${COLOR_GREEN}success: ${COLOR_RESET}${@}"
-}
 
 generate_files_registry() {
   printf "${COLOR_BLUE}info:${COLOR_RESET} Generating files registry..."
@@ -75,4 +63,3 @@ rm -rf ./$packagename
 test -d $dist || mkdir -p $dist
 mv ./$packagename.hoshi $dist
 du -sh $dist/$packagename.hoshi
-
