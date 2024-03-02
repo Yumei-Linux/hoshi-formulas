@@ -1,0 +1,8 @@
+{
+  "name": "git",
+  "description": "git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.",
+  "depends": ["files/unzip"],
+  "downloads": [
+    "https://github.com/git/git/archive/refs/heads/master.zip"
+  ]
+}

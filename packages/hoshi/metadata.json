@@ -1,0 +1,10 @@
+{
+  "name": "hoshi",
+  "description": "Hoshi is the official package manager of the yumei linux distribution. Focuses on simplicity and to be fast enough for daily usage",
+  "downloads": [],
+  "depends": [
+    "dev/zig",
+    "dev/git",
+    "net/wget"
+  ]
+}

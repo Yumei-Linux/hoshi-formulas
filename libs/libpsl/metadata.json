@@ -1,0 +1,11 @@
+{
+  "name": "libpsl",
+  "description": "libpsl is a C library that provides functions to check domains against the Public Suffix List.",
+  "depends": [
+    "libs/libidn2",
+    "libs/libunistring"
+  ],
+  "downloads": [
+    "https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz"
+  ]
+}

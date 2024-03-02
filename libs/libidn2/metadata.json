@@ -1,0 +1,8 @@
+{
+  "name": "libidn2",
+  "description": "libidn2 is a free software implementation of the IDNA2008 specifications",
+  "depends": ["libs/libunistring"],
+  "downloads": [
+    "https://ftp.gnu.org/gnu/libidn/libidn2-2.3.7.tar.gz"
+  ]
+}
