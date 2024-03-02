@@ -1,0 +1,8 @@
+{
+  "name": "pcre",
+  "description": "pcre is a library for Perl-compatible regular expressions",
+  "depends": ["debug/valgrind"],
+  "downloads": [
+    "https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.bz2/download"
+  ]
+}

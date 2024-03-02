@@ -1,0 +1,11 @@
+{
+  "name": "slang",
+  "description": "slang is a multi-platform library designed to allow a developer to create a wide range of interactive programs.",
+  "depends": [
+    "libs/libpng",
+    "perl/pcre"
+  ],
+  "downloads": [
+    "http://www.jedsoft.org/releases/slang/slang-2.3.1.tar.bz2"
+  ]
+}

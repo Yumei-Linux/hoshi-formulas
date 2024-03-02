@@ -1,0 +1,8 @@
+{
+  "name": "nano",
+  "description": "GNU nano is a small and friendly text editor.",
+  "depends": ["dev/slang"],
+  "downloads": [
+    "https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz"
+  ]
+}
