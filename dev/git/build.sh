@@ -7,10 +7,10 @@ build() {
 
   make configure
 
-  ./configure --prefix=$dest/usr \
-    --docdir=$dest/usr/share/doc/git
+  ./configure --prefix=/usr \
+    --docdir=/usr/share/doc/git
 
   make -j`nproc` all && \
-    make install
+    make DESTDIR=$dest install
 }
 
