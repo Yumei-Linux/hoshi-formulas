@@ -1,0 +1,8 @@
+{
+  "name": "rsync",
+  "description": "rsync is a fast and extraordinarily versatile file copying tool.",
+  "depends": ["libs/popt"],
+  "downloads": [
+    "https://www.samba.org/ftp/rsync/src/rsync-3.2.7.tar.gz"
+  ]
+}

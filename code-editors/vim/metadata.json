@@ -1,0 +1,8 @@
+{
+  "name": "vim",
+  "description": "vim is a highly configurable text editor built to enable efficient text editing.",
+  "depends": ["net/rsync"],
+  "downloads": [
+    "https://github.com/vim/vim/archive/v9.1.0041/vim-9.1.0041.tar.gz"
+  ]
+}
