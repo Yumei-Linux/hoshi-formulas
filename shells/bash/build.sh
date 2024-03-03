@@ -4,7 +4,12 @@ downloads() {
 
 build() {
   cd bash-5.2
-  ./configure --prefix=$dest/usr
-  make -j`nproc`
-  make install
+
+  ./configure
+    --prefix=/usr \
+    --without-bash-malloc \
+    --with-curses
+
+  make -j`nproc` && \
+    make DESTDIR=$dest install
 }

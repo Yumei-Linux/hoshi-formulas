@@ -1,7 +1,7 @@
 {
   "name": "bash",
   "description": "GNU bash",
-  "depends": [],
+  "depends": ["libs/ncurses"],
   "downloads": [
     "https://ftp.gnu.org/gnu/bash/bash-5.2.tar.gz"
   ]
